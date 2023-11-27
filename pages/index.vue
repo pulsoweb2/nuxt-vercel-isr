@@ -1,10 +1,6 @@
 <script setup>
-const generatedAt = useState(() => new Date().toISOString())
-const date = new Date(generatedAt.value)
-const timeAgo = ref()
-onMounted(() => {
-    timeAgo.value = ms(Date.now() - date.valueOf(), { long: true })
-})
+const generatedAt = useState(() => new Date());
+const timeAgo = generatedAt.value.toLocaleString();
 </script>
 
 <template>
