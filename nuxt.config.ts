@@ -2,13 +2,30 @@ export default defineNuxtConfig({
   routeRules: {
     '/**': { isr: 15 }
   },
-  modules: ['@nuxtjs/tailwindcss', "@pinia/nuxt", '@nuxtjs/apollo', '@nuxt/image', '@pinia-plugin-persistedstate/nuxt', 'nuxt-speedkit'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    "@pinia/nuxt",
+    '@nuxtjs/apollo',
+    '@nuxt/image',
+    '@pinia-plugin-persistedstate/nuxt',
+    'nuxt-speedkit'
+  ],
   components: [
     {
       path: '~/components/',
       extensions: ['.vue'],
     },
   ],
+  // typescript: {
+  //   tsConfig: {
+  //     compilerOptions: {
+  //       types: ["tslib"]
+  //     }
+  //   }
+  // },
+  build: {
+    transpile: ['tslib', 'graphql', '@apollo/client', 'ts-invariant/process'],
+  },
   apollo: {
     clients: {
       default: {
