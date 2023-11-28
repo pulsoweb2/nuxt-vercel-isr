@@ -30,11 +30,7 @@
     "nuxt-swiper": "^1.2.2",
     "radix-vue": "^1.1.1",
     "tailwind-merge": "^2.0.0",
-<<<<<<< HEAD
     "tailwindcss-animate": "^1.0.7",
     "tslib": "^2.6.2"
-=======
-    "tailwindcss-animate": "^1.0.7"
->>>>>>> 442aa5c177c35355b66283d94102de617171b9da
   }
 }
